@@ -20,7 +20,7 @@ GEOIP_DIST_URL="https://github.com/maxmind/geoip-api-c/releases/download/v$GEOIP
 GEOIP_DIST_DIR="GeoIP-$GEOIP_VERSION"
 
 # GEOLITECITY_URL="http://geolite.maxmind.com/download/geoip/database/GeoLite2-City.mmdb.gz"
-GEOLITECITY_URL="https://download.maxmind.com/app/geoip_download?edition_id=GeoLite2-City&date=20191224&license_key=dikZSWeHbD4fbAR8&suffix=tar.gz"
+GEOLITECITY_URL="https://download.maxmind.com/app/geoip_download?edition_id=GeoLite2-City&date=20200121&license_key=dikZSWeHbD4fbAR8&suffix=tar.gz"
 GEOLITECITY_FILE="GeoLite2-City.mmdb"
 
 echo "-------- CACHE_DIR = $CACHE_DIR BUILD_DIR = $BUILD_DIR"
@@ -54,7 +54,7 @@ echo "Downloaded and unzipped file"
 
 mkdir -p "$BUILD_DIR/$VENDORED_GEOIP/share/"
 # TODO (Satya): Need to read folder name logically instead of hard-coded
-cp "GeoLite2-City_20191224/$GEOLITECITY_FILE" "$BUILD_DIR/$VENDORED_GEOIP/share/$GEOLITECITY_FILE"
+cp "GeoLite2-City_20200121/$GEOLITECITY_FILE" "$BUILD_DIR/$VENDORED_GEOIP/share/$GEOLITECITY_FILE"
 
 #set-env LIBRARY_PATH "\$LIBRARY_PATH:$APP_GEOIP/lib"
 #set-env LD_LIBRARY_PATH "\$LD_LIBRARY_PATH:$APP_GEOIP/lib"
