@@ -20,7 +20,7 @@ GEOIP_DIST_URL="https://github.com/maxmind/geoip-api-c/releases/download/v$GEOIP
 GEOIP_DIST_DIR="GeoIP-$GEOIP_VERSION"
 
 # GEOLITECITY_URL="http://geolite.maxmind.com/download/geoip/database/GeoLite2-City.mmdb.gz"
-GEOLITECITY_URL="https://download.maxmind.com/app/geoip_download?edition_id=GeoLite2-City&date=20200121&license_key=dikZSWeHbD4fbAR8&suffix=tar.gz"
+GEOLITECITY_URL="https://download.maxmind.com/app/geoip_download?edition_id=GeoLite2-City&date=20200218&license_key=dikZSWeHbD4fbAR8&suffix=tar.gz"
 GEOLITECITY_FILE="GeoLite2-City.mmdb"
 
 echo "-------- CACHE_DIR = $CACHE_DIR BUILD_DIR = $BUILD_DIR"
