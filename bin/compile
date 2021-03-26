@@ -57,7 +57,7 @@ tar -xzvf ${GEOLITECITY_FILE}.tar.gz -C ./GeoLite2-City > /dev/null
 # cd to new folder
 cd GeoLite2-City
 # cd to first folder
-cd GeoLite2-City_*/
+cd "$(ls -t1 -d GeoLite2-City_*/ | head -n1)"
 
 mkdir -p "$BUILD_DIR/$VENDORED_GEOIP/share/"
 # cp "GeoLite2-City_20200121/$GEOLITECITY_FILE" "$BUILD_DIR/$VENDORED_GEOIP/share/$GEOLITECITY_FILE"
