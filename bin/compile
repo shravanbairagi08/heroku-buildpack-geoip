@@ -47,9 +47,18 @@ if [ -f $GEOLITECITY_FILE ]; then
     rm $GEOLITECITY_FILE
 fi
 
-echo "Downloading GeoLite2-City db from $GEOLITECITY_URL"
-curl -s -L -o ${GEOLITECITY_FILE}.tar.gz "${GEOLITECITY_URL}"
-echo "Downloaded and unzipped file"
+if [ -f "$GEOLITECITY_FILE" ]; then
+    echo "File $GEOLITECITY_FILE already exists. Skipping download."
+else
+    echo "File $GEOLITECITY_FILE does not exist. Downloading GeoLite2-City db from $GEOLITECITY_URL..."
+    curl -s -L -o ${GEOLITECITY_FILE}.tar.gz "${GEOLITECITY_URL}"
+    if [ $? -eq 0 ]; then
+        echo "Downloaded and unzipped file"
+    else
+        echo "Error: Failed to download GeoLite2-City db."
+        exit 1
+    fi
+fi
 
 # create a new folder and untar file in that
 mkdir GeoLite2-City
