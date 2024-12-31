@@ -42,10 +42,6 @@ cd $CACHE_DIR/.geoip/$GEOIP_VERSION
 cd $CACHE_DIR/.geoip/
 #echo "Current Dir3 = $PWD"
 # delete GeoLite2-City file if exists already
-if [ -f $GEOLITECITY_FILE ]; then
-    echo "Removing existing $GEOLITECITY_FILE..."
-    rm $GEOLITECITY_FILE
-fi
 
 if [ -f "$GEOLITECITY_FILE" ]; then
     echo "File $GEOLITECITY_FILE already exists. Skipping download."
